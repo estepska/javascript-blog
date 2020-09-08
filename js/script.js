@@ -9,7 +9,7 @@ const titleClickHandler = function (event) {
   const activeLinks = document.querySelectorAll(".titles a.active");
 
   for (let activeLink of activeLinks) {
-    activeLink.classList.remove("a.active");
+    activeLink.classList.remove("active");
   }
 
   /* add class 'active' to the clicked link */
