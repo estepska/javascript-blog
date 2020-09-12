@@ -48,7 +48,7 @@ function generateTitleLinks() {
   let html = "";
   for (let article of articles) {
     /* get the article id */
-    const articleId = article.getAttribute("href");
+    const articleId = article.getAttribute("id");
 
     /* find the title element */
     /* get the title from the title element */
