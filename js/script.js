@@ -170,11 +170,14 @@ function addClickListenersToTags() {
 addClickListenersToTags();
 
 function generateAuthors() {
-  /* find all articles */
   const article = document.querySelectorAll(optArticleAuthorSelector);
+  const titleList = article.querySelector(optArticleTagsSelector);
+  titleList.innerHTML = '';
   let html = '';
-  const articleAuthor = article.getAttribute('data-author');
+  const articleTags = article.getAttribute('data-author');
   const linkHTML = '<p class="post-author">by</p>';
+  html = html + linkHTML;
+  titleList.innerHTML = html;
 }
 generateAuthors();
 
@@ -183,10 +186,11 @@ function authorClickHandler(event) {
   event.preventDefault();
   console.log('Link was clicked!');
   const href = clickedElement.getAttribute('href');
-  const tag = href.replace('#author-', '');
+  const author = href.replace('#author-', '');
   const activeLinks = document.querySelectorAll('a.active[href^="#author-"]');
   const links = document.querySelectorAll(' a[href=' + href + ']');
   link.classList.add('active');
+  generateTitleLinks('[data-author="' + tag + '"]');
 }
 
 function addClickListenersToAuthors() {
