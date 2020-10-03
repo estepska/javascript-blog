@@ -170,14 +170,15 @@ function addClickListenersToTags() {
 addClickListenersToTags();
 
 function generateAuthors() {
-  const article = document.querySelectorAll(optArticleAuthorSelector);
-  const titleList = article.querySelector(optArticleTagsSelector);
-  titleList.innerHTML = '';
-  let html = '';
-  const articleTags = article.getAttribute('data-author');
-  const linkHTML = '<p class="post-author">by</p>';
-  html = html + linkHTML;
-  titleList.innerHTML = html;
+  const articles = document.querySelectorAll(optArticleSelector);
+  for (let article of articles) {
+    const titleList = article.querySelector(optArticleAuthorSelector);
+    titleList.innerHTML = '';
+    let html = '';
+    const articleAuthors = article.getAttribute('data-author');
+    const linkHTML = '<p class="data-author">by</p>';
+    html = html + linkHTML;
+  }
 }
 generateAuthors();
 
