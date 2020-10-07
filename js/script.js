@@ -95,7 +95,7 @@ function generateTags() {
     const articleTags = article.getAttribute('data-tags');
 
     /* split tags into array */
-    const articleTagsArray = articleTags.split('');
+    const articleTagsArray = articleTags.split(', ');
 
     /* START LOOP: for each tag */
     for (let tag of articleTagsArray) {
@@ -177,11 +177,11 @@ function generateAuthors() {
     titleList.innerHTML = '';
     const articleAuthor = article.getAttribute('data-author');
     const linkHTML =
-      '<p class="data-author">by <a href="#author-' +
+      '<p class="data-author">by<a href="#author-' +
       articleAuthor +
       '">' +
       articleAuthor +
-      '</a></p>';
+      ' </a></p>';
     titleList.innerHTML = linkHTML;
   }
 }
@@ -202,7 +202,7 @@ function authorClickHandler(event) {
   const author = href.replace('#author-', '');
 
   /* find all author links with class active */
-  const activeLinks = document.querySelector('a.active[href^="#author-"]');
+  const activeLinks = document.querySelectorAll('a.active[href^="#author-"]');
 
   /* START LOOP: for each active author link */
   /* remove class active */
@@ -211,7 +211,7 @@ function authorClickHandler(event) {
   }
   /* END LOOP: for each active author link */
   /* find all author links with "href" attribute equal to the "href" constant */
-  const links = document.querySelectorAll(' a[href=' + href + ']');
+  const links = document.querySelectorAll[' a(href="' + href + '")'];
 
   /* START LOOP: for each found author link */
   /* add class active */
