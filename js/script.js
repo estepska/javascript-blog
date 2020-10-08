@@ -177,7 +177,7 @@ function generateAuthors() {
     titleList.innerHTML = '';
     const articleAuthor = article.getAttribute('data-author');
     const linkHTML =
-      '<p class="data-author">by<a href="#author-' +
+      '<p class="data-author">by<a href="#data-author' +
       articleAuthor +
       '">' +
       articleAuthor +
