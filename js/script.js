@@ -177,7 +177,7 @@ function generateAuthors() {
     titleList.innerHTML = '';
     const articleAuthor = article.getAttribute('data-author');
     const linkHTML =
-      '<p class="data-author">by<a href="#data-author' +
+      '<p class="data-author">by<a href="#author-' +
       articleAuthor +
       '">' +
       articleAuthor +
@@ -211,7 +211,7 @@ function authorClickHandler(event) {
   }
   /* END LOOP: for each active author link */
   /* find all author links with "href" attribute equal to the "href" constant */
-  const links = document.querySelectorAll[' a(href="' + href + '")'];
+  const links = document.querySelectorAll(' a[href="' + href + '"]');
 
   /* START LOOP: for each found author link */
   /* add class active */
