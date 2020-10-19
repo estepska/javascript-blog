@@ -19,5 +19,9 @@
     ],
     "semi": ["error", "always"],
     "no-console": ["off"]
+  },
+  "globals": {
+    "Handlebars": false
   }
 }
+ 
