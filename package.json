@@ -14,7 +14,7 @@
     "eslint": "^7.9.0",
     "node-sass": "^4.14.1",
     "onchange": "^7.0.2"
-  },
+  }, 
   "scripts": {
     "init-project": "npm install&& npm-run-all init:*",
     "init:dirs": "mkdirp sass css vendor images js",
