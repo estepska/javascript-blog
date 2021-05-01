@@ -295,7 +295,7 @@ function generateAuthors() {
     /* [NEW] generate code of a link and add it to allTagsHTML */
     const authorsLinkHTML = '<li><a class="' + calculateAuthorClass() + 'href="#author-' + author > ' <span>' + author + '</span></a>(' + (allAuthors[author], authorsParams) + ')</li>';
     allAuthorsHTML += authorsLinkHTML;
-    console.log('authorsLinkHTML:', authorLinkHTML);
+    //console.log('authorsLinkHTML:', authorLinkHTML);
   }
   /* [NEW] END LOOP: for each tag in allTags: */
 
@@ -347,9 +347,7 @@ function addClickListenersToAuthors() {
   for (let link of authorLinks) {
     link.addEventListener('click', authorClickHandler);
   }
+
 }
 addClickListenersToAuthors();
-
-
-
 
